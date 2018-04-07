@@ -1,0 +1,180 @@
+@CHARSET "UTF-8";
+
+body,input,select,button,pre{
+	font-family: 'Malgun Gothic', sans-serif;
+}
+
+body{
+	background-color:#f7f7f7;
+	margin:0;
+	color:#333;
+}
+
+header{
+	background-color: #fafafa;
+	overflow: auto;
+}
+
+nav{
+	display:flex;
+	overflow:auto;
+	border: 1px solid #ddd;
+	border-right: 0;
+	border-left:0;
+}
+
+nav>a{
+	display:block;
+	padding:0.90em;
+}
+
+a:link{
+	text-decoration:none;
+	color:inherit;
+}
+
+button, select, input, textarea{
+	border-radius: 4px;
+	border:1px solid #eee;
+	padding:0.25rem 0.5rem;
+	margin:0 0.5rem 0 0;
+}
+
+button{
+	margin-top:0.75rem;
+	background-color: #eee;
+}
+
+label{
+	margin:0.75rem 0 0.25rem;
+	font-weight: bold;
+}
+
+input[type=text], textarea{
+	max-width: 40rem;
+}
+
+form{
+	display:flex;
+	flex-direction:column;
+}
+
+
+
+h1{
+	font-size: 2rem;
+	text-align: center;
+	margin:0;
+	padding:1rem 0;
+	background-color: white;
+}
+
+h2{
+	margin-left:0.5rem;
+	font-size: 1.5rem;
+}
+
+section{
+	background-color: #fafafa;
+	padding: 1rem;
+	margin: 1rem;
+	overflow: auto;
+}
+
+section+section{
+	margin-left:0;
+}
+
+article{
+	background-color: white;
+	border-radius: 3px;
+	padding: 1rem;
+	margin-bottom: 1rem;
+}
+
+table{
+	width:100%;	
+	border-collapse: collapse;
+	margin:0.5rem 0;
+}
+
+td{
+	border: 1px solid #eee;
+}
+
+th{
+	background-color: #efefef;
+}
+
+th, td{
+	padding:0.25rem 0.5rem;
+}
+
+main{
+	display:flex;
+	min-height:70vh;
+}
+
+main section:last-child{
+	flex-grow:1;
+}
+
+footer{
+	padding:1rem;
+	background-color: #eaeaea;
+}
+
+.row{
+	display:flex;
+	flex-direction:row;
+}
+
+
+.col{
+	display:flex;
+	flex-direction:column;
+}
+
+.rest{
+	flex-grow:1;
+}
+
+.j-around{
+	justify-content:space-around;
+}
+
+.j-between{
+	justify-content:space-between;
+}
+
+.j-center{
+	justify-content:center;
+}
+
+.a-center{
+	align-items:center;
+}
+
+.j-end{
+	justify-content:flex-end;
+}
+
+.small{
+	font-size:0.85em;
+}
+
+.big{
+	font-size:1.15rem;
+}
+
+.no-border{
+	border-width:0;
+}
+
+.loginform{
+	width:20rem;
+}
+
+.articleform{
+	width:40rem;
+}
