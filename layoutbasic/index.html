@@ -1,0 +1,156 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="asset/ckeditor5/ckeditor.js"></script>
+    <script src="asset/ckeditor5/translations/ko.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class='container p'>
+            <div class='row jc-between'>
+                <div class='brand'>Brand</div>
+                <div class='row'>
+                    <input type="search" style="width:20rem"><button>검색</button>
+                </div>
+                <nav><a>login</a></nav>
+            </div>
+        </div>
+        <nav class='mt gray-bg'>
+            <div class='container row gap dist05'>
+                <a class='ml05'>menu1</a>
+                <a>menu2</a>
+                <a>menu3</a>
+                <a>menu4</a>
+            </div>
+        </nav>
+    </header>
+    <div>
+        <div class='container row'>
+            <nav class='col sub dist'>
+                <a>sub1</a>
+                <a>sub2</a>
+                <a>sub3</a>
+                <a>sub4</a>
+                <a>sub5</a>
+            </nav>
+            <main class='rest p'>
+                <section>
+                    <div>menu1 > sub1</div>
+                    <div class='row ai-end jc-between'>
+                        <h1>Main title</h1>
+                        <div>
+                            <button>글쓰기</button>
+                        </div>
+                    </div>
+                    <div class='mt'>
+                        <table>
+                            <tr>
+                                <th>번호</th>
+                                <th>제목</th>
+                                <th>작성자</th>
+                                <th>작성일</th>
+                                <th>좋아요</th>
+                                <th>조회</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>포토샾</td>
+                                <td>이은성</td>
+                                <td>2018.12.14</td>
+                                <td>111</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>포토샾</td>
+                                <td>이은성</td>
+                                <td>2018.12.14</td>
+                                <td>111</td>
+                                <td>34</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>포토샾</td>
+                                <td>이은성</td>
+                                <td>2018.12.14</td>
+                                <td>111</td>
+                                <td>34</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class='row jc-between mt2'>
+                        <div>total record count</div>
+                        <div class='row gap'>
+                            <button>previous</button>
+                            <div>1 2 3 4 5 6</div>
+                            <button>next</button>
+                        </div>
+                        <div class='row'>
+                            <input type="search"><button>검색</button>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <h1>글쓰기</h1>
+                    <div>
+                        <table>
+                            <tr>
+                                <th style="width: 8rem">제목</th>
+                                <td><input type="text" style="width:20rem"></td>
+                            </tr>
+                            <tr>
+                                <th>내용</th>
+                                <td><textarea id="editor"></textarea></td>
+                            </tr>
+                            <tr>
+                                <th>첨부</th>
+                                <td><input type="file"></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class='row jc-end mt2'>
+                        <button>등록하기</button>
+                    </div>
+                </section>
+                <section>
+                    <h1>로그인</h1>
+                    <div class="row loginform">
+                        <div>
+                            <table>
+                                <tr>
+                                    <th>아이디</th>
+                                    <td><input type="text"></td>
+                                </tr>
+                                <tr>
+                                    <th>비밀번호</th>
+                                    <td><input type="password"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <button>로그인</button>
+                    </div>
+                </section>
+            </main>
+        </div>
+    </div>
+    <footer class='gray-bg'>
+        <div class='container p'>footer</div>
+    </footer>
+    <script>
+        ClassicEditor
+            .create(document.querySelector('#editor'), {
+                language: 'ko',
+                ckfinder: {
+                    uploadUrl: '<%=blobstoreService.createUploadUrl("/upload")%>'
+                }
+            })
+            .catch(error => {
+                console.error(error);
+            });
+    </script>
+</body>
+</html>

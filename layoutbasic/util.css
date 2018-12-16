@@ -1,0 +1,84 @@
+/* Eunsung Lee simple flex style*/
+
+.scroll{
+    overflow-y: scroll;
+}
+
+.row {
+    display: flex;
+}
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.p {
+    padding: 1rem;
+}
+
+.rest {
+    flex-grow: 1;
+}
+
+.gray-bg {
+    background-color: #f1f1f1;
+}
+
+.gap>*:not(:last-child) {
+    margin-right: 1rem;
+}
+
+.gap-v>*:not(:last-child) {
+    margin-bottom: 1rem;
+}
+
+.dist05>* {
+    padding: 0.5rem;
+}
+
+.dist>* {
+    padding: 1rem;
+}
+
+.ai-center {
+    align-items: center;
+}
+
+.ai-end {
+    align-items: flex-end;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+.jc-end {
+    justify-content: flex-end;
+}
+
+.jc-between {
+    justify-content: space-between;
+}
+
+.text-125 {
+    font-size: 1.25rem;
+}
+
+.mt {
+    margin-top: 1rem;
+}
+
+.mt2 {
+    margin-top: 2rem;
+}
+
+.ml05{
+    margin-left: 0.5rem;
+}
+
+
+.hide{
+    display: none;
+}
+
